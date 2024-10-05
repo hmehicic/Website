@@ -1,2 +1,2 @@
 # Website
-I created this website for my final project in Computer Science Principles junior year. It is about my home country, Croatia. Check it out!
+Hi there! My name is Harris Mehicic, and I created and designed this website for my junior year, final project in Computer Science Principles. My website is about my home country, Croatia, and hopefully, you learn something cool and interesting from it. Feedback would be much appreciated, also, this is the first website I have ever built (and it is still a work in progress). Please let me know if there are any troubles with getting it to work as I had to upload it using Git LFS remotely.
