@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        header {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            border-bottom: 1px solid white;
+        }
+
+        main {
+            margin-top: 70px;
+            overflow-y: auto;
+            max-height: calc(100vh - 70px);
+            background-color: #006180;
+            padding-bottom: 20px;
+        }
+
+        .content {
+            padding-top: 20px;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin-top: 0;
+        }
+
+        .location {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .location h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .location img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .dropdown-content {
+            display: none;
+            text-align: center;
+        }
+
+        .dropdown-content p {
+            margin-top: 5px;
+        }
+
+        .dropdown-arrow {
+            cursor: pointer;
+        }
+
+        #recommendation-form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #recommendation-form input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        #recommendation-form input[type="submit"],
+        #recommendation-form button[type="button"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #recommendation-list {
+            margin-top: 30px;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        #recommendation-list li {
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        #clear-button {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Designed By: Harris Mehicic" class="logo">
+            <ul>
+                <li>
+                    <a href="Index.html">Homepage</a>
+                </li>
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="line"></div>
+    <main>
+        <div class="content">
+            <div class="location">
+                <h3>Dubrovnik</h3>
+                <img src="Dubrovnik.jpg" alt="Dubrovnik">
+                <div class="dropdown-arrow">▬</div>
+                <div class="dropdown-content">
+                    <p>Dubrovnik, Croatia, is this incredible coastal gem, famous for its ancient architecture and fortress-like city walls that overlook the sparkling Adriatic Sea. It's often called the "Pearl of the Adriatic" because of its breathtaking beauty and rich history.</p>
+                    <p>Population: 42,615</p>
+                </div>
+            </div>
+            <div class="location">
+                <h3>Split</h3>
+                <img src="Split.jpg" alt="Split">
+                <div class="dropdown-arrow">▬</div>
+                <div class="dropdown-content">
+                    <p>Split, Croatia, is a vibrant coastal city known for its ancient Roman architecture, bustling waterfront promenade, and as the gateway to the stunning Dalmatian islands.</p>
+                    <p>Population: 178,102</p>
+                </div>
+            </div>
+            <div class="location">
+                <h3> <strong>Zagreb</strong></h3>
+                <img src="Zagreb.jpg" alt="Zagreb">
+                <div class="dropdown-arrow">▬</div>
+                <div class="dropdown-content">
+                    <p>Zagreb, the capital city of Croatia, is a dynamic blend of historic charm and modern vibrancy, boasting elegant Austro-Hungarian architecture, lively street cafes, and a rich cultural scene.</p>
+                    <p>Population:  802,762</p>
+                </div>
+            </div>
+
+            <div id="recommendation-form">
+                <form id="recommendation" onsubmit="submitRecommendation(event)">
+                    <input type="text" id="recommendation-text" placeholder="Any recommendations?">
+                    <input type="submit" value="Submit">
+                    <button id="clear-button" type="button" onclick="clearRecommendations()">Clear</button>
+                </form>
+            </div>
+
+            <div id="recommendation-list">
+                <h2>Recommendations Submitted:</h2>
+                <ul id="recommendation-list-items"></ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

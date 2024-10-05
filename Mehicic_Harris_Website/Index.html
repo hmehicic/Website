@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .parallax-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background-image: url('Croatia Coast Edited copy.png');
+            background-size: 90%;
+            animation: parallax-background 120s infinite linear;
+        }
+
+        @keyframes parallax-background {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-layer"></div>
+    </div>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Designed By: Harris Mehicic" class="logo">
+            <ul>
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <a href="Locations.html">Locations</a>
+                </li>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <img src="Croatia Coast Edited copy.png" alt="Croatia Coast">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
